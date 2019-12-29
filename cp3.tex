@@ -130,7 +130,7 @@ DKIMは電子署名を使うので、第三者から転送されたメールの�
 また、認証局が発行した証明書を使用しないので、メールサーバの所有者の判定には使えない事にも注してください。
 
 \subsection{DMARC}
-DMARC(Domain based Message Authentication Reporting & Conformance)は、ドメイン認証として単独で使用するフレームワークではありません。 SPFとDKIMの判定結果に対して、どのような扱いをすればいいかという情報を受信側に提供するフレームワークです。
+DMARC(Domain based Message Authentication Reporting \& Conformance)は、ドメイン認証として単独で使用するフレームワークではありません。 SPFとDKIMの判定結果に対して、どのような扱いをすればいいかという情報を受信側に提供するフレームワークです。
 また、受信側に、SPFとDKIMの両方で認証失敗したメールの統計情報と、認証に失敗したメールの情報を送信する先を示します。
 
 具体的には、SPFによる認証とDKIMによる認証の両方とも失敗したメーるの扱いを指示します。

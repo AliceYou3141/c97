@@ -20,8 +20,14 @@
 
 \subsection{OP25B}
 
+\begin{figure}[htbp]
+	\includegraphics[width=12cm,clip]{draw/op25b.pdf}
+	\caption{OP25B}
+	\label{fig:op25b}
+\end{figure}
+
 メールサーバへの接続をフィルタリングする古典的な手法として、OP25B(Outbound Port 25 Blocking）というものがあります。
-これは、クライアントに対して、クライアントが接続されたネットワークの外のメールサーバの、25/TCPに接続させない、というフィルタリングを行う、メールセキュリティ手法です。
+これは、図\ref{fig:op25b}のように、クライアントに対して、クライアントが接続されたネットワークの外のメールサーバの、25/TCPに接続させない、というフィルタリングを行う、メールセキュリティ手法です。
 メールサーバに対しての設定でなく、ネットワークの出口でフィルタリングを行うという点に注意してください。
 そして、これは自組織のメールサーバを守るものというより、他所のメールサーバに自組織のユーザが迷惑をかけないために行うものとなります。
 
@@ -117,8 +123,15 @@ SMTPSも、OP25Bの対象外であるため、インターネット経由で接�
 
 \subsection{SubmissionとSMTPSの使い分け}
 
+\begin{figure}[htbp]
+	\includegraphics[width=12cm,clip]{draw/withtls.pdf}
+	\caption{SubmissionとSMTPS}
+	\label{fig:submission_smtps}
+\end{figure}
+
 SubmissionとSMTPSは、SMTP-AUTHのクライアント・サーバ間通信に使うことは同じです。
 違いは、TLSが明示的であるか暗黙的であるか、という点です。
+この関係は、図\ref{fig:submission_smtps}としてあらわされます。
 
 Submissionは、TLSに対応していないメールクライアントでも接続可能な設定とすることができます。
 この時、サーバ側ではStartTLSでTLSのセッションに移行しなくても、セッションを許可する設定をします。
